@@ -84,7 +84,7 @@ The connection between the containers should be succesfully established
 
 5. **Creating & Apllying the Manifest:**
 
-In the Server container, go into the directory `cd /etc/puppetlabs/code/environments/production/manifests/` and create a file named  `manifest.pp` with the follwoing content:
+In the Server container, go into the directory `/etc/puppetlabs/code/environments/production/manifests/` and create a file named  `manifest.pp` with the follwoing content:
 
 ```puppet
 class {'cowsay':}
