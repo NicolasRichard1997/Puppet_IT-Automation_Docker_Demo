@@ -1,4 +1,8 @@
-class {'cowsay':}
+exec { 'apt-update':
+  command => '/usr/bin/apt-get update',
+}
+
 package { 'cowsay':
-  ensure => installed,
+  ensure => present,
+  require => Exec['apt-update'],
 }
