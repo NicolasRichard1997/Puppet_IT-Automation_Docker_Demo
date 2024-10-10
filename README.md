@@ -49,6 +49,11 @@ ping puppet-server-container
 
 4.**Establish the Connection between Containers:**
 
+In the Server container:
+```bash
+puppetserver start
+```
+
 In the Agent's container, run:
 ```bash
 puppet agent --test --waitforcert=60
