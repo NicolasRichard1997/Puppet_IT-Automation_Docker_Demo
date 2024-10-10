@@ -14,9 +14,7 @@ This demo showcases the use of Puppet to automate the installation of the `cowsa
 
 1. **Fetching Docker Images:**
 
-  It is possible to either generate the Puppet Agent and Puppet Server images from this repository or to pull them from DockerHub
-    
-  To generate the images locally, go into each of the Agent and Server folders and build the images:
+  To generate the Docker images locally, go into each of the Agent and Server folders and build the images:
 
   ```bash
   cd Agent && docker build -t puppet-agent .
@@ -25,11 +23,6 @@ This demo showcases the use of Puppet to automate the installation of the `cowsa
   cd Server && docker build -t puppet-server .
   ```
 
-To pull images from DockerHub:
-```bash
-# Insert pulling Instructions from DockerHub
-```
-  
 2. **Create a Custom Network:**
 
    Create a Docker network to allow communication between the Puppet server and agent:
