@@ -87,9 +87,13 @@ The connection between the containers should be succesfully established
 In the Server container, go into the directory `/etc/puppetlabs/code/environments/production/manifests/` and create a file named  `manifest.pp` (the program `GNU nano 6.2` has been pre-loaded in the Docker image) with the following content:
 
 ```puppet
-class {'cowsay':}
+exec { 'apt-update':
+  command => '/usr/bin/apt-get update',
+}
+
 package { 'cowsay':
-  ensure => installed,
+  ensure => present,
+  require => Exec['apt-update'],
 }
 ```
 
